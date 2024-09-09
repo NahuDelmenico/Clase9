@@ -14,6 +14,10 @@ public class Empleado {
 		
 	}
 	
+	public double getSalario(){
+		return this.salario;
+	}
+	
 	public int calcularDiasVacaciones() {
 		
 	return	Period.between(this.fechaInicio,LocalDate.now()).getYears()*7;
@@ -27,7 +31,7 @@ public class Empleado {
 		return anos*1000.0;
 	}
 	
-	public double calcularIndemnizacionDespido(int salarioBase) {
+	public double calcularIndemnizacionDespido(double salarioBase) {
 		double anos = Period.between(this.fechaInicio, LocalDate.now()).getYears();
 		return anos * this.salario;
 	}

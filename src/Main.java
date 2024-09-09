@@ -8,9 +8,10 @@ public class Main {
 		
 		
 		Empleado Trabajador1 = new Empleado("Juan Carlos Garcia", LocalDate.of(2021, 8, 15),20000);
-		
+		double salario = Trabajador1.getSalario();
 		JOptionPane.showMessageDialog(null, "Tiene " + Trabajador1.calcularDiasVacaciones() +" dias de vacaciones" );
 		JOptionPane.showMessageDialog(null, "Su aumento de salario es de $" + Trabajador1.calcularAumentoSueldo() );
+		JOptionPane.showMessageDialog(null, Trabajador1.calcularIndemnizacionDespido(salario));
 	}
 
 }
